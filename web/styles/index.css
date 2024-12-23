@@ -1,0 +1,139 @@
+* {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Новый градиент */
+    padding: 20px;
+}
+
+.todo-container {
+    width: 700px;
+    justify-self: center;
+    background-color: #f0f4f8; /* Светлый фон */
+    border: 2px solid #d1d9e6; /* Мягкий цвет рамки */
+    border-radius: 10px; /* Увеличено округление */
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Добавлена тень */
+}
+
+.todo-list {
+    width: 100%;
+    max-width: 600px; /* Увеличена ширина */
+    background: #fff;
+    margin: 50px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 15px; /* Более округлённые углы */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15); /* Тень для объёма */
+}
+
+.todo-list h2 {
+    color: #123456; /* Глубокий синий */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.todo-list h2 img {
+    width: 50px;
+    margin-left: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e6ecf0; /* Нежный фон */
+    border-radius: 25px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+input {
+    flex: 1;
+    border: 1px solid #ccc;
+    outline: none;
+    background: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 40px;
+    background: #4caf50; /* Зелёный фон */
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #45a049; /* Более насыщенный зелёный при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #f9fafb; /* Лёгкий фон для списка */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #e0e7ff; /* Синий оттенок при наведении */
+}
+
+ul li span img {
+    height: 20px;
+    width: 20px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(../images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #777;
+    text-decoration: line-through;
+    background-color: #d9f7be; /* Светло-зелёный фон для завершённых задач */
+}
+
+ul li.checked::before {
+    background-image: url(../images/check.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+}
